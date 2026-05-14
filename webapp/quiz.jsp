@@ -28,11 +28,11 @@
                         int id = rs.getInt("id");
             %>
                         <div class="question">
-                            <p><b>Q<%=id%>: <%= rs.getString("question_text") %></b></p>
-                            <input type="radio" name="q<%=id%>" value="A" required> <%= rs.getString("option_a") %><br>
-                            <input type="radio" name="q<%=id%>" value="B"> <%= rs.getString("option_b") %><br>
-                            <input type="radio" name="q<%=id%>" value="C"> <%= rs.getString("option_c") %><br>
-                            <input type="radio" name="q<%=id%>" value="D"> <%= rs.getString("option_d") %><br>
+                            <p><b>Q<%=id%>: <%= rs.getString("question_text").replace("<", "&lt;").replace(">", "&gt;") %></b></p>
+                            <input type="radio" name="q<%=id%>" value="A" required> <%= rs.getString("option_a").replace("<", "&lt;").replace(">", "&gt;") %><br>
+                            <input type="radio" name="q<%=id%>" value="B"> <%= rs.getString("option_b").replace("<", "&lt;").replace(">", "&gt;") %><br>
+                            <input type="radio" name="q<%=id%>" value="C"> <%= rs.getString("option_c").replace("<", "&lt;").replace(">", "&gt;") %><br>
+                            <input type="radio" name="q<%=id%>" value="D"> <%= rs.getString("option_d").replace("<", "&lt;").replace(">", "&gt;") %><br>
                         </div>
             <%
                     }
