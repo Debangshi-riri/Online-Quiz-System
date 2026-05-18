@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body { 
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe0b2 100%); 
+    margin: 0;
+    padding: 40px 20px; 
+    min-height: 100vh;
+}
+
+
+.quiz-container { 
+    max-width: 650px;
+    margin: 0 auto;
+    background: white; 
+    padding: 35px; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 25px rgba(211, 84, 0, 0.15); 
+    border: 1px solid #ffd1a4;
+}
+
+h1 { 
+    color: #d35400; 
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-bottom: 3px solid #ff9800;
+    padding-bottom: 12px;
+}
+
+.name-section {
+    margin-bottom: 25px;
+}
+
+.name-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 2px solid #ffe0b2;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.name-input:focus {
+    border-color: #ff9800;
+}
+
+
+.question { 
+    margin-bottom: 35px; 
+    background: #fffdfa;
+    border: 1px solid #ffe8cc;
+    border-left: 6px solid #ff9800; 
+    padding: 20px; 
+    border-radius: 8px;
+}
+
+.question-text {
+    font-size: 18px;
+    color: #2c1a19;
+    margin-bottom: 15px;
+}
+
+
+.question-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ffd1a4;
+}
+
+
+.option-row {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    background: #ffffff;
+    border: 1px solid #f5eae0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-row:hover {
+    background: #fff8f0;
+    border-color: #ff9800;
+}
+
+.option-row input[type="radio"] {
+    accent-color: #d35400;
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #d35400;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background: #b34700;
+}
+
+.error {
+    color: #c0392b;
+    font-weight: bold;
+    padding: 10px;
+    background: #fdeaea;
+    border-radius: 6px;
+}

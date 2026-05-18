@@ -23,18 +23,18 @@ public class ResultServlet extends HttpServlet {
                 String userAnswer = request.getParameter(questionId);
                 String correctAnswer = rs.getString("correct_ans");
 
-                // Check if the answer matches
+                
                 if(userAnswer != null && userAnswer.equals(correctAnswer)) {
                     score++;
                 }
             }
             con.close();
             
-            // Pass the data to the next page
+            
             request.setAttribute("finalScore", score);
             request.setAttribute("uName", name);
             
-            // Go to the result page
+            
             RequestDispatcher rd = request.getRequestDispatcher("result.jsp");
             rd.forward(request, response);
 
